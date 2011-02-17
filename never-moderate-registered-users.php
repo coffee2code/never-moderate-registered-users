@@ -2,17 +2,17 @@
 /**
  * @package Never_Moderate_Registered_Users
  * @author Scott Reilly
- * @version 2.0
+ * @version 2.0.1
  */
 /*
 Plugin Name: Never Moderate Registered Users
-Version: 2.0
+Version: 2.0.1
 Plugin URI: http://coffee2code.com/wp-plugins/never-moderate-registered-users/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
-Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+, 2.9+, 3.0+.
+Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+, 2.9+, 3.0+, 3.1+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -21,7 +21,7 @@ Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+, 2.9+, 3.0+.
 */
 
 /*
-Copyright (c) 2008-2010 by Scott Reilly (aka coffee2code)
+Copyright (c) 2008-2011 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -37,6 +37,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
+if ( !function_exists( 'c2c_never_moderate_registered_users' ) ) :
 /**
  * Never moderate comments by registered users.
  *
@@ -45,7 +46,6 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * @param int $approved Current approval status for comment
  * @return int If the comment is approved
  */
-if ( !function_exists( 'c2c_never_moderate_registered_users' ) ) :
 function c2c_never_moderate_registered_users( $approved ) {
 	global $wpdb, $commentdata;
 	$user_id = isset( $commentdata['user_ID'] ) ? $commentdata['user_ID'] : false;
