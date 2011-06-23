@@ -2,17 +2,17 @@
 /**
  * @package Never_Moderate_Registered_Users
  * @author Scott Reilly
- * @version 2.0.1
+ * @version 2.0.2
  */
 /*
 Plugin Name: Never Moderate Registered Users
-Version: 2.0.1
+Version: 2.0.2
 Plugin URI: http://coffee2code.com/wp-plugins/never-moderate-registered-users/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
-Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+, 2.9+, 3.0+, 3.1+.
+Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+, 2.9+, 3.0+, 3.1+, 3.2+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -37,7 +37,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-if ( !function_exists( 'c2c_never_moderate_registered_users' ) ) :
+if ( ! function_exists( 'c2c_never_moderate_registered_users' ) ) :
 /**
  * Never moderate comments by registered users.
  *
@@ -51,7 +51,7 @@ function c2c_never_moderate_registered_users( $approved ) {
 	$user_id = isset( $commentdata['user_ID'] ) ? $commentdata['user_ID'] : false;
 
 	// If the comment isn't from a registered user, or is already approved, don't change approval status
-	if ( !$user_id || $approved )
+	if ( ! $user_id || $approved )
 		return $approved;
 
 	$user = new WP_User( $user_id );
