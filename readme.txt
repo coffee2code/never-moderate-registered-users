@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 Requires at least: 2.8
-Tested up to: 3.2
-Stable tag: 2.0.2
-Version: 2.0.2
+Tested up to: 3.3
+Stable tag: 2.0.3
+Version: 2.0.3
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -18,11 +18,11 @@ To be recognized as a registered user, the user must be logged into your blog at
 
 This plugin assumes that you trust your registered users.  It will automatically approve any comment made by registered users, even if the comment stinks of spam.  Therefore, it is recommended that you do not allow users to register themselves (uncheck the setting "Anyone can register" in the WordPress admin under Settings -> General).
 
-For those wanting to allow people to register themselves, and still have those people (called "subscribers" by WordPress) to be moderated as necessary, but allow for users with other roles or capabilities from being moderated, you can still do so.  The plugin provides a filter, 'c2c_never_moderate_registered_users_caps', which allows you to specify the roles and capabilities that can bypass moderation.  See the FAQ for an example.
+You can still allow open registration, whereby these "subscribers" as moderated as usual, while other more privileged users do not get moderated. The plugin provides a filter, 'c2c_never_moderate_registered_users_caps', which allows you to specify the roles and capabilities that can bypass moderation.  See the FAQ for an example.
 
 This plugin is a partial successor to my now-defunct Never Moderate Admins or Post Author plugin.  In addition to preventing admins and the post's author from being moderated, that plugin also allowed you to prevent registered users from being moderated.  WordPress has long since integrated that functionality, so the main thrust of that plugin became moot.  However, the ability to never moderate registered users is still a valid need that requires this plugin.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-registered-users/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-registered-users/) | [Plugin Directory Page](http://wordpress.org/extend/plugins/never-moderate-registered-users/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -71,6 +71,12 @@ function dont_moderate_contributors( $caps ) {
 
 == Changelog ==
 
+= 2.0.3 =
+* Note compatibility through WP 3.3+
+* Tweak extended description
+* Add link to plugin directory page to readme.txt
+* Update copyright date (2012)
+
 = 2.0.2 =
 * Note compatibility through WP 3.2+
 * Minor code formatting changes (spacing)
@@ -100,6 +106,9 @@ function dont_moderate_contributors( $caps ) {
 
 
 == Upgrade Notice ==
+
+= 2.0.3 =
+Trivial update: noted compatibility through WP 3.3+
 
 = 2.0.2 =
 Trivial update: noted compatibility through WP 3.2+ and minor code formatting changes (spacing)
