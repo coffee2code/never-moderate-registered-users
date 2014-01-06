@@ -1,22 +1,21 @@
 === Never Moderate Registered Users ===
 Contributors: coffee2code
-Donate link: http://coffee2code.com/donate
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
 Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 2.8
-Tested up to: 3.5
-Stable tag: 2.0.5
-Version: 2.0.5
+Requires at least: 3.1
+Tested up to: 3.8
+Stable tag: 2.1
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
 
 == Description ==
 
-Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
+This plugin prevents comments from registered users from ever going into the moderation queue or getting automatically marked as spam, regardless of the apparent spamminess of the comment.
 
-To be recognized as a registered user, the user must be logged into your blog at the time they post their comment.
+To be recognized as a registered user, the user must be logged into your site at the time they post their comment.
 
 This plugin assumes that you trust your registered users.  It will automatically approve any comment made by registered users, even if the comment stinks of spam.  Therefore, it is recommended that you do not allow users to register themselves (uncheck the setting "Anyone can register" in the WordPress admin under Settings -> General).
 
@@ -24,7 +23,7 @@ You can still allow open registration, whereby these "subscribers" as moderated 
 
 This plugin is a partial successor to my now-defunct Never Moderate Admins or Post Author plugin.  In addition to preventing admins and the post's author from being moderated, that plugin also allowed you to prevent registered users from being moderated.  WordPress has long since integrated that functionality, so the main thrust of that plugin became moot.  However, the ability to never moderate registered users is still a valid need that requires this plugin.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-registered-users/) | [Plugin Directory Page](http://wordpress.org/extend/plugins/never-moderate-registered-users/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-registered-users/) | [Plugin Directory Page](http://wordpress.org/plugins/never-moderate-registered-users/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -73,6 +72,18 @@ function dont_moderate_contributors( $caps ) {
 
 == Changelog ==
 
+= 2.1 (2013-01-05) =
+* Fix so spam comments from registered users get approved
+* Accept $commentdata arg from 'pre_comment_approved' filter instead of using global
+* Check for use of both user_ID or user_id in commentdata array
+* Add unit tests
+* Note compatibility through WP 3.8+
+* Drop compatibility with versions of WP older than 3.1
+* Update copyright date (2014)
+* Minor code and documentation reformatting (spacing, bracing)
+* Change donate link
+* Add banner image
+
 = 2.0.5 =
 * Add check to prevent execution of code if file is directly accessed
 * Note compatibility through WP 3.5+
@@ -119,6 +130,9 @@ function dont_moderate_contributors( $caps ) {
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Recommended update: bug fixes; minor code tweaks; added unit tests; noted compatibility through WP 3.8+; dropped compatibility with versions of WP older than 3.1
 
 = 2.0.5 =
 Trivial update: noted compatibility through WP 3.5+
