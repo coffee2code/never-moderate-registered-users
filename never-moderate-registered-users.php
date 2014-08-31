@@ -1,25 +1,24 @@
 <?php
 /**
+ * Plugin Name: Never Moderate Registered Users
+ * Version:     2.1.1
+ * Plugin URI:  http://coffee2code.com/wp-plugins/never-moderate-registered-users/
+ * Author:      Scott Reilly
+ * Author URI:  http://coffee2code.com/
+ * License:     GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
+ *
+ * Compatible with WordPress 3.1 through 4.0+.
+ *
+ * =>> Read the accompanying readme.txt file for instructions and documentation.
+ * =>> Also, visit the plugin's homepage for additional information and updates.
+ * =>> Or visit: https://wordpress.org/plugins/never-moderate-registered-users/
+ *
  * @package Never_Moderate_Registered_Users
  * @author Scott Reilly
- * @version 2.1
+ * @version 2.1.1
  */
-/*
-Plugin Name: Never Moderate Registered Users
-Version: 2.1
-Plugin URI: http://coffee2code.com/wp-plugins/never-moderate-registered-users/
-Author: Scott Reilly
-Author URI: http://coffee2code.com/
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
-
-Compatible with WordPress 3.1 through 3.8+.
-
-=>> Read the accompanying readme.txt file for instructions and documentation.
-=>> Also, visit the plugin's homepage for additional information and updates.
-=>> Or visit: http://wordpress.org/plugins/never-moderate-registered-users/
-*/
 
 /*
 	Copyright (c) 2008-2014 by Scott Reilly (aka coffee2code)
