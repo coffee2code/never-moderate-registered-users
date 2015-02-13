@@ -5,8 +5,8 @@ Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 4.0
-Stable tag: 2.1.1
+Tested up to: 4.1
+Stable tag: 2.1.2
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -76,6 +76,10 @@ function dont_moderate_contributors( $caps ) {
 
 == Changelog ==
 
+= 2.1.2 (2015-02-13) =
+* Note compatibility through WP 4.1+
+* Update copyright date (2015)
+
 = 2.1.1 (2014-08-30) =
 * Minor plugin header reformatting
 * Minor code reformatting (bracing, spacing)
@@ -142,6 +146,9 @@ function dont_moderate_contributors( $caps ) {
 
 
 == Upgrade Notice ==
+
+= 2.1.2 =
+Trivial update: noted compatibility through WP 4.1+ and updated copyright date (2015)
 
 = 2.1.1 =
 Trivial update: noted compatibility through WP 4.0+; added plugin icon.
