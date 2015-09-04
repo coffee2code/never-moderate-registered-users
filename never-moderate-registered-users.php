@@ -9,14 +9,14 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
  *
- * Compatible with WordPress 3.1 through 4.1+.
+ * Compatible with WordPress 3.1 through 4.3+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
  * =>> Or visit: https://wordpress.org/plugins/never-moderate-registered-users/
  *
  * @package Never_Moderate_Registered_Users
- * @author Scott Reilly
+ * @author  Scott Reilly
  * @version 2.1.2
  */
 
@@ -48,6 +48,7 @@ if ( ! function_exists( 'c2c_never_moderate_registered_users' ) ) :
  *
  * @param int|string $approved    Current approval status for comment: 0, 1, spam
  * @param array      $commentdata The comment data
+ *
  * @return int|string             New approval status for comment, either same as incoming or 1
  */
 function c2c_never_moderate_registered_users( $approved, $commentdata ) {
