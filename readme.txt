@@ -5,8 +5,8 @@ Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 4.3
-Stable tag: 2.1.2
+Tested up to: 4.4
+Stable tag: 2.1.3
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -40,13 +40,7 @@ This plugin assumes that any comment made by a registered user (or a user of the
 
 = I don't trust registered users who are just "subscribers", but I trust "contributors"; can this plugin moderate accordingly? =
 
-Yes. You can specify the capabilities and roles that can bypass moderation. Here's an example that can be placed in your active theme's functions.php file:
-
-`add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
-function dont_moderate_contributors( $caps ) {
-	$caps[] = 'contributor';
-	return $caps;
-}`
+Yes. You can specify the capabilities and roles that can bypass moderation. See the example provided for the 'c2c_never_moderate_registered_users_caps' filter.
 
 = Does this plugin include unit tests? =
 
@@ -59,7 +53,7 @@ The plugin is further customizable via one filter. Typically, these customizatio
 
 = c2c_never_moderate_registered_users_caps (filter) =
 
-The 'c2c_never_moderate_registered_users_caps' filter allows you to define the capabilities, any one of which a user must have in order to never get moderated.
+The 'c2c_never_moderate_registered_users_caps' filter allows you to define the capabilities that are automatically trusted, any one of which a user must have in order to never get moderated.
 
 Arguments:
 
@@ -67,17 +61,32 @@ Arguments:
 
 Example:
 
-`add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
+`
+/**
+ * Require that a user have at least 'contributor' capabilities in order to be
+ * trusted enough not to be moderated.
+ *
+ * @param $args $caps Array of trusted capabilities. If blank, then any user registered on the site is trusted.
+ * @return array
+ */
 function dont_moderate_contributors( $caps ) {
 	$caps[] = 'contributor';
 	return $caps;
-}`
+}
+add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
+`
 
 
 == Changelog ==
 
-= () =
-* Change: Note compatibility through WP 4.3+.
+= 2.1.3 (2016-01-28) =
+* New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
+* New: Add 'Text Domain' header attribute.
+* Change: Update unit tests to account for `wp_allow_comment()` returning 'trash' for spam comments when trash is enabled.
+* Change: Explicitly declare methods in unit tests as public.
+* Change: Add docblock to code example in readme.txt.
+* Change: Note compatibility through WP 4.4+.
+* Change: Update copyright date (2016).
 
 = 2.1.2 (2015-02-13) =
 * Note compatibility through WP 4.1+
@@ -149,6 +158,9 @@ function dont_moderate_contributors( $caps ) {
 
 
 == Upgrade Notice ==
+
+= 2.1.3 =
+Trivial update: minor unit test tweaks; verified compatibility through WP 4.4+; and updated copyright date (2016)
 
 = 2.1.2 =
 Trivial update: noted compatibility through WP 4.1+ and updated copyright date (2015)
