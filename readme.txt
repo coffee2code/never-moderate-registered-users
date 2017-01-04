@@ -5,7 +5,7 @@ Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 4.4
+Tested up to: 4.7
 Stable tag: 2.1.3
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
@@ -81,6 +81,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 = 2.1.4 () =
 * New: Add LICENSE file.
+* Change: Note compatibility through WP 4.7+.
 * Change: Update copyright date (2017).
 
 = 2.1.3 (2016-01-28) =

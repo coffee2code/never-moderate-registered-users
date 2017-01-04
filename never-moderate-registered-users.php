@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
  *
- * Compatible with WordPress 3.1 through 4.3+.
+ * Compatible with WordPress 3.1 through 4.7+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
