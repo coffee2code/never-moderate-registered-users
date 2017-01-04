@@ -111,7 +111,7 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		$this->assertEquals( '1', $comment->comment_approved );
 	}
 
-	public function test_registered_user_moderation_worth_comment_is_approved() {
+	public function test_registered_user_moderation_worthy_comment_is_approved() {
 		add_filter( 'comment_max_links_url', array( $this, 'comment_max_links_url' ) );
 
 		$user_id     = $this->create_user( 'subscriber' );
