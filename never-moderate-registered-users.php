@@ -73,7 +73,7 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 	if ( $user ) {
 		$trusted_caps = (array) apply_filters( 'c2c_never_moderate_registered_users_caps', array() );
 
-		if ( empty( $trusted_caps ) ) {
+		if ( ! $trusted_caps ) {
 			$has_cap = true;
 		} else {
 			$has_cap = false;
