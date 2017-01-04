@@ -81,6 +81,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 = 2.1.4 () =
 * New: Add LICENSE file.
+* Change: Update copyright date (2017).
 
 = 2.1.3 (2016-01-28) =
 * New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
