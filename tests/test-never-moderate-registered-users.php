@@ -49,10 +49,19 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		$post_id = $this->factory->post->create( array( 'post_author' => $user_id ) );
 
 		$defaults = array(
-			'comment_post_ID'    => $post_id,
-			'comment_author'     => 'some visitor',
-			'comment_author_url' => 'http://example.com',
-			'comment_content'    => 'Sample comment text.',
+			'comment_agent'        => '',
+			'comment_approved'     => '1',
+			'comment_author'       => 'some visitor',
+			'comment_author_email' => '',
+			'comment_author_IP'    => '',
+			'comment_author_url'   => 'http://example.com',
+			'comment_content'      => 'Sample comment text.',
+			'comment_date'         => '',
+			'comment_date_gmt'     => '',
+			'comment_karma'        => '',
+			'comment_parent'       => '',
+			'comment_post_ID'      => $post_id,
+			'comment_type'         => '',
 		);
 		return wp_parse_args( $settings, $defaults );
 	}

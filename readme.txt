@@ -80,6 +80,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 == Changelog ==
 
 = 2.1.4 () =
+* Fix: Prevent PHP unit test errors by defaulting expected commentdata array elements.
 * New: Add LICENSE file.
 * Change: Enable more error ourput for unit tests.
 * Change: Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable.
