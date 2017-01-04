@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 4.7
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -79,7 +79,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 == Changelog ==
 
-= 2.1.4 () =
+= 2.1.4 (2017-01-03) =
 * Fix: Prevent PHP unit test errors by defaulting expected commentdata array elements.
 * New: Add LICENSE file.
 * Change: Enable more error ourput for unit tests.
@@ -167,6 +167,9 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 
 == Upgrade Notice ==
+
+= 2.1.4 =
+Trivial update: updated unit test bootstrap file, noted compatibility through WP 4.7+, and updated copyright date (2017)
 
 = 2.1.3 =
 Trivial update: minor unit test tweaks; verified compatibility through WP 4.4+; and updated copyright date (2016)
