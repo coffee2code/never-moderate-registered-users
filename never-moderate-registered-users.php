@@ -47,10 +47,10 @@ if ( ! function_exists( 'c2c_never_moderate_registered_users' ) ) :
  *
  * @since 1.0
  *
- * @param int|string $approved    Current approval status for comment: 0, 1, spam
- * @param array      $commentdata The comment data
+ * @param int|string $approved    The approval status. Accepts 1, 0, or 'spam'.
+ * @param array      $commentdata Comment data
  *
- * @return int|string             New approval status for comment, either same as incoming or 1
+ * @return bool      New approval status for comment, either same as incoming or 1
  */
 function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 	global $wpdb;
