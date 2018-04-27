@@ -28,7 +28,7 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-regist
 
 == Installation ==
 
-1. Unzip `never-moderate-registered-users.zip` inside the `/wp-content/plugins/` directory (or install via the built-in WordPress plugin installer)
+1. Install via the built-in WordPress plugin installer. Or download and unzip `never-moderate-registered-users.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
 1. Activate the plugin through the 'Plugins' admin menu in WordPress
 
 
@@ -81,6 +81,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 = () =
 * Change: Add GitHub link to readme
+* Change: Update installation instruction to prefer built-in installer over .zip file
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
