@@ -79,6 +79,9 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 == Changelog ==
 
+= () =
+* Change: Update copyright date (2018)
+
 = 2.1.4 (2017-01-03) =
 * Fix: Prevent PHP unit test errors by defaulting expected commentdata array elements.
 * New: Add LICENSE file.
