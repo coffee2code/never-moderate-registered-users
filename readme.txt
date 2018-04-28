@@ -81,6 +81,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 
 = () =
 * Change: Add GitHub link to readme
+* Change: Unit tests: Minor whitespace tweaks to bootstrap
 * Change: Update installation instruction to prefer built-in installer over .zip file
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
