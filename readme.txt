@@ -80,6 +80,7 @@ add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contribut
 == Changelog ==
 
 = () =
+* New: Add README.md
 * Change: Add GitHub link to readme
 * Change: Unit tests: Minor whitespace tweaks to bootstrap
 * Change: Update installation instruction to prefer built-in installer over .zip file
