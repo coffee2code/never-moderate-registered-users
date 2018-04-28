@@ -19,6 +19,7 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 
 		remove_filter( 'c2c_never_moderate_registered_users_caps', array( $this, 'c2c_never_moderate_registered_users_caps' ) );
 		remove_filter( 'comment_max_links_url', array( $this, 'comment_max_links_url' ) );
+		remove_filter( 'c2c_never_moderate_registered_users_approved', array( $this, 'c2c_never_moderate_registered_users_approved' ) );
 	}
 
 
@@ -73,6 +74,13 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 
 	public function comment_max_links_url( $max ) {
 		return 1;
+	}
+
+	public function c2c_never_moderate_registered_users_approved( $approved, $commentdata, $user ) {
+		if ( $approved && false !== stripos( $commentdata['comment_content'], 'google' ) ) {
+			$approved = 0;
+		}
+		return $approved;
 	}
 
 
@@ -187,6 +195,20 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		$comment = get_comment( $comment_id );
 
 		$this->assertEquals( '0', $comment->comment_approved );
+	}
+
+	public function test_filter_c2c_never_moderate_registered_users_approved() {
+		add_filter( 'c2c_never_moderate_registered_users_approved', array( $this, 'c2c_never_moderate_registered_users_approved' ), 10, 3 );
+
+		$user_id     = $this->create_user( 'subscriber' );
+		$commentdata = $this->get_commentdata( array( 'comment_content' => 'Mention of blackjack and Google.', 'user_id' => $user_id ) );
+
+		$this->assertEquals( 0, wp_allow_comment( $commentdata ) );
+
+		$comment_id = wp_new_comment( $commentdata );
+		$comment = get_comment( $comment_id );
+
+		$this->assertEquals( 0, $comment->comment_approved );
 	}
 
 }

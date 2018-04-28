@@ -49,9 +49,9 @@ Yes.
 
 == Filters ==
 
-The plugin is further customizable via one filter. Typically, these customizations would be put into your active theme's functions.php file, or used by another plugin.
+The plugin is further customizable via two filters. Typically, these customizations would be put into your active theme's functions.php file, or used by another plugin.
 
-= c2c_never_moderate_registered_users_caps (filter) =
+**c2c_never_moderate_registered_users_caps (filter)**
 
 The 'c2c_never_moderate_registered_users_caps' filter allows you to define the capabilities that are automatically trusted, any one of which a user must have in order to never get moderated.
 
@@ -76,10 +76,41 @@ function dont_moderate_contributors( $caps ) {
 add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
 `
 
+**c2c_never_moderate_registered_users_approved (filter)**
+
+The 'c2c_never_moderate_registered_users_approved' filter allows for granular control for whether a comment by a registered user that would otherwise be moderated or marked as spam should automatically be approved. Note: this filter only runs when a comment is from a registered user *and* is flagged for moderation or spam.
+
+Arguments:
+
+* $approved    (bool)    The approval status. Will be 1 unless changed by another plugin using this hook. Accepts 1, 0, 'spam' or WP_Error.
+* $commentdata (array)   Comment data.
+* $user        (WP_User) The commenting user.
+
+Example:
+
+`
+/**
+ * Always moderate comments by registered users if they mention "Google".
+ *
+ * @param bool    $approved    Approval status. Accepts 1, 0, 'spam', WP_Error.
+ * @param array   $commentdata Comment data.
+ * @param WP_User $user        The commenting user.
+ * @return bool
+ */
+function c2c_even_registered_users_cannot_say_google( $approved, $commentdata, $user ) {
+	if ( $approved && false !== stripos( $commentdata['comment_content'], 'google' ) ) {
+		$approved = 0;
+	}
+	return $approved;
+}
+add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
+`
+
 
 == Changelog ==
 
 = () =
+* New: Add filter 'c2c_never_moderate_registered_users_approved' for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved
 * New: Add README.md
 * Change: Add GitHub link to readme
 * Change: Unit tests: Minor whitespace tweaks to bootstrap

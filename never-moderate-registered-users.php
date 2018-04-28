@@ -86,7 +86,17 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 		}
 
 		if ( $has_cap ) {
-			$approved = 1;
+			/**
+			 * Filters the approval when the plugin switches a comment from being
+			 * unapproved to being approved.
+			 *
+			 * @since 2.2
+			 *
+			 * @param bool    $approved    Approval status. Accepts 1, 0, 'spam', WP_Error.
+			 * @param array   $commentdata Comment data.
+			 * @param WP_User $user        The commenting user.
+			 */
+			$approved = apply_filters( 'c2c_never_moderate_registered_users_approved', 1, $commentdata, $user );
 		}
 	}
 
