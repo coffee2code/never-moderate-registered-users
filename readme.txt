@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 4.9
-Stable tag: 2.1.4
+Stable tag: 2.2
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -30,13 +30,14 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-regist
 
 1. Install via the built-in WordPress plugin installer. Or download and unzip `never-moderate-registered-users.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
 1. Activate the plugin through the 'Plugins' admin menu in WordPress
+1. Optional: Use one or more of the provided hooks in custom code to control specific capabilities that should be exempted from moderation and spam or to control the feature on a comment by comment basis.
 
 
 == Frequently Asked Questions ==
 
 = Hey, why did I get some obvious spam from a registered user? =
 
-This plugin assumes that any comment made by a registered user (or a user of the minimum defined user_level) is not spam, regardless of the spamminess of their comment. If you don't trust your registered users you probably shouldn't have this plugin activated. Or at least follow the directions above to increase the minimum threshold for trusted users.
+This plugin assumes that any comment made by a registered user (or a user with a specified capabilities) is not spam, regardless of the spamminess of their comment. If you don't trust your registered users you probably shouldn't have this plugin activated. Or at least follow the directions above to increase the minimum threshold for trusted users.
 
 = I don't trust registered users who are just "subscribers", but I trust "contributors"; can this plugin moderate accordingly? =
 
@@ -109,7 +110,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 
 == Changelog ==
 
-= () =
+= 2.2 (2018-04-28) =
 * New: Add filter 'c2c_never_moderate_registered_users_approved' for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved
 * New: Add README.md
 * Change: Add GitHub link to readme
@@ -206,6 +207,9 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 
 
 == Upgrade Notice ==
+
+= 2.2 =
+Minor feature update: added 'c2c_never_moderate_registered_users_approved' filter, added README.md, noted compatibility through WP 4.9+, and updated copyright date (2018)
 
 = 2.1.4 =
 Trivial update: updated unit test bootstrap file, noted compatibility through WP 4.7+, and updated copyright date (2017)
