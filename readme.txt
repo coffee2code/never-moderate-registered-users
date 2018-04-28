@@ -8,7 +8,7 @@ Requires at least: 3.1
 Tested up to: 4.9
 Stable tag: 2.1.4
 
-Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
+Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
 
 == Description ==

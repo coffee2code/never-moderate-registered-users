@@ -1,6 +1,6 @@
 # Never Moderate Registered Users
 
-A plugin for WordPress that ensures comments made by registered users are never moderated or marked as spam, regardless of the apparent spamminess of the comment.
+A plugin for WordPress that ensures comments made by registered users (or, alternatively, those with specified capabilities) are never moderated or marked as spam, regardless of the apparent spamminess of the comment.
 
 This plugin is available in the WordPress Plugin Directory: https://wordpress.org/plugins/never-moderate-registered-users/
 
