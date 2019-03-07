@@ -111,6 +111,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 == Changelog ==
 
 = () =
+* New: Add inline documentation for undocumented hook
 * Fix: Correct code example error in readme
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Tweak third installation instruction

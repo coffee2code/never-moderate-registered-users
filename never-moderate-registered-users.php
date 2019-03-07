@@ -71,6 +71,18 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 	$user = new WP_User( $user_id );
 
 	if ( $user ) {
+		/**
+		 * Filters the user capabilities that are trusted enough to warrant never
+		 * being moderated.
+		 *
+		 * If not capabilities are explicitly provided, then any registered user
+		 * does not get moderated.
+		 *
+		 * @since 2.0.0
+		 *
+		 * @param array $user_caps The user caps. Empty array implies any registered
+		 *                         user. Default empty array.
+		 */
 		$trusted_caps = (array) apply_filters( 'c2c_never_moderate_registered_users_caps', array() );
 
 		if ( ! $trusted_caps ) {
@@ -92,7 +104,8 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 			 *
 			 * @since 2.2
 			 *
-			 * @param bool    $approved    Approval status. Accepts 1, 0, 'spam', WP_Error.
+			 * @param bool    $approved    Approval status. Accepts 1, 0, 'spam',
+			 *                             WP_Error. Default 1.
 			 * @param array   $commentdata Comment data.
 			 * @param WP_User $user        The commenting user.
 			 */
