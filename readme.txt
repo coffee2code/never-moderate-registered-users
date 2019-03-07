@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.1
-Stable tag: 2.2
+Stable tag: 2.2.1
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -110,7 +110,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 == Changelog ==
 
-= () =
+= 2.2.1 (2019-03-07) =
 * New: Add inline documentation for undocumented hook
 * Fix: Correct code example error in readme
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
@@ -216,6 +216,9 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 
 == Upgrade Notice ==
+
+= 2.2.1 =
+Trivial update: noted compatibility through WP 5.1+ and updated copyright date (2019)
 
 = 2.2 =
 Minor feature update: added 'c2c_never_moderate_registered_users_approved' filter, added README.md, noted compatibility through WP 4.9+, and updated copyright date (2018)
