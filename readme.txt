@@ -48,7 +48,7 @@ Yes. You can specify the capabilities and roles that can bypass moderation. See 
 Yes.
 
 
-== Filters ==
+== Hooks ==
 
 The plugin is further customizable via two filters. Typically, these customizations would be put into your active theme's functions.php file, or used by another plugin.
 
@@ -111,6 +111,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 == Changelog ==
 
 = () =
+* Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Note compatibility through WP 5.1+
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
