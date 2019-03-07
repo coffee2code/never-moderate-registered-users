@@ -3,7 +3,7 @@ Contributors: coffee2code
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
 Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 4.9
 Stable tag: 2.2
@@ -109,6 +109,9 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 
 
 == Changelog ==
+
+= () =
+* Change: Update License URI to be HTTPS
 
 = 2.2 (2018-04-28) =
 * New: Add filter 'c2c_never_moderate_registered_users_approved' for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved

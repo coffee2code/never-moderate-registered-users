@@ -7,7 +7,7 @@
  * Author URI:  http://coffee2code.com/
  * Text Domain: never-moderate-registered-users
  * License:     GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
  *
  * Compatible with WordPress 3.1 through 4.9+.
