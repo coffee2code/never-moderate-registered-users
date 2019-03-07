@@ -111,6 +111,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 == Changelog ==
 
 = () =
+* Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
 = 2.2 (2018-04-28) =
