@@ -104,13 +104,14 @@ function c2c_even_registered_users_cannot_say_google( $approved, $commentdata, $
 	}
 	return $approved;
 }
-add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
+add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered_users_cannot_say_google', 10, 3 );
 `
 
 
 == Changelog ==
 
 = () =
+* Fix: Correct code example error in readme
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Tweak third installation instruction
 * Change: Note compatibility through WP 5.1+
