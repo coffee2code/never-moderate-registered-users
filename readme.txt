@@ -30,7 +30,7 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/never-moderate-regist
 
 1. Install via the built-in WordPress plugin installer. Or download and unzip `never-moderate-registered-users.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
 1. Activate the plugin through the 'Plugins' admin menu in WordPress
-1. Optional: Use one or more of the provided hooks in custom code to control specific capabilities that should be exempted from moderation and spam or to control the feature on a comment by comment basis.
+1. Optional: Use one or more of the provided hooks in custom code to control specific capabilities that should be exempted from moderation and spam or to control the feature on a comment-by-comment basis.
 
 
 == Frequently Asked Questions ==
@@ -112,6 +112,7 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 10, 3 );
 
 = () =
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
+* Change: Tweak third installation instruction
 * Change: Note compatibility through WP 5.1+
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
