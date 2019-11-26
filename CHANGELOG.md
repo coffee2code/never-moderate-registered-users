@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 2.2.2 _(2019-11-25)_
 * New: Add CHANGELOG.md and move all but most recent changelog entries into it
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
 * Change: Note compatibility through WP 5.3+
@@ -17,7 +17,7 @@
 * Change: Update License URI to be HTTPS
 
 ## 2.2 _(2018-04-28)_
-* New: Add filter 'c2c_never_moderate_registered_users_approved' for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved
+* New: Add filter `c2c_never_moderate_registered_users_approved` for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved
 * New: Add README.md
 * Change: Add GitHub link to readme
 * Change: Unit tests: Minor whitespace tweaks to bootstrap

@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.3
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -110,6 +110,13 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 == Changelog ==
 
+= 2.2.2 (2019-11-25) =
+* New: Add CHANGELOG.md and move all but most recent changelog entries into it
+* Change: Update unit test install script and bootstrap to use latest WP unit test repo
+* Change: Note compatibility through WP 5.3+
+* Change: Update copyright date (2020)
+* Change: Split paragraph in README.md's "Support" section into two
+
 = 2.2.1 (2019-03-07) =
 * New: Add inline documentation for undocumented hook
 * Fix: Correct code example error in readme
@@ -132,6 +139,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/ne
 
 
 == Upgrade Notice ==
+
+= 2.2.2 =
+Trivial update: modernized unit tests, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.3+, and updated copyright date (2020)
 
 = 2.2.1 =
 Trivial update: noted compatibility through WP 5.1+ and updated copyright date (2019)
