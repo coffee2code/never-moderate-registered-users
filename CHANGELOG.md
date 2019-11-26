@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * New: Add CHANGELOG.md and move all but most recent changelog entries into it
 * Change: Note compatibility through WP 5.3+
+* Change: Split paragraph in README.md's "Support" section into two
 
 ## 2.2.1 _(2019-03-07)_
 * New: Add inline documentation for undocumented hook
