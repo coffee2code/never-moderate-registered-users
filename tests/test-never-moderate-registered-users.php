@@ -201,7 +201,7 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		$this->assertEquals( 'trash', $comment->comment_approved );
 	}
 
-	public function test_registered_user_moderation_worth_comment_is_moderated_when_caps_not_high_enough() {
+	public function test_registered_user_moderation_worthy_comment_is_moderated_when_caps_not_high_enough() {
 		add_filter( 'c2c_never_moderate_registered_users_caps', array( $this, 'c2c_never_moderate_registered_users_caps' ) );
 		add_filter( 'comment_max_links_url', array( $this, 'comment_max_links_url' ) );
 
@@ -215,6 +215,10 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 
 		$this->assertEquals( '0', $comment->comment_approved );
 	}
+
+	/*
+	 * filter: c2c_never_moderate_registered_users_approved
+	 */
 
 	public function test_filter_c2c_never_moderate_registered_users_approved() {
 		add_filter( 'c2c_never_moderate_registered_users_approved', array( $this, 'c2c_never_moderate_registered_users_approved' ), 10, 3 );
