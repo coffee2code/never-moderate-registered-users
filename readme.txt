@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.4
-Stable tag: 2.2.2
+Stable tag: 2.3
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -110,6 +110,14 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 == Changelog ==
 
+= 2.3 (2020-05-10) =
+* Change: Disallow handling comments flagged with `WP_Error`
+* Change: Update inline docs for `c2c_never_moderate_registered_users()` and filter `c2c_never_moderate_registered_users_approved` to reflect that a `WP_Error` and 'trash' are also valid potential values
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
+* Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
+* Change: Unit tests: Remove unnecessary unregistering of hooks
+
 = 2.2.2 (2019-11-25) =
 * New: Add CHANGELOG.md and move all but most recent changelog entries into it
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
@@ -126,19 +134,13 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
-= 2.2 (2018-04-28) =
-* New: Add filter 'c2c_never_moderate_registered_users_approved' for ultimately overriding if an otherwise moderated or spam comment by a registered user should be approved
-* New: Add README.md
-* Change: Add GitHub link to readme
-* Change: Unit tests: Minor whitespace tweaks to bootstrap
-* Change: Update installation instruction to prefer built-in installer over .zip file
-* Change: Note compatibility through WP 4.9+
-* Change: Update copyright date (2018)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3 =
+Minor update: Skipped handling of comments flagged as being an error, updated a few URLs to be HTTPS, updated some inline docs, and noted compatibility through WP 5.4+.
 
 = 2.2.2 =
 Trivial update: modernized unit tests, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.3+, and updated copyright date (2020)

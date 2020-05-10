@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Never Moderate Registered Users
- * Version:     2.2.2
+ * Version:     2.3
  * Plugin URI:  https://coffee2code.com/wp-plugins/never-moderate-registered-users/
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package Never_Moderate_Registered_Users
  * @author  Scott Reilly
- * @version 2.2.2
+ * @version 2.3
  */
 
 /*
