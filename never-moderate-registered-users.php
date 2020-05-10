@@ -47,10 +47,11 @@ if ( ! function_exists( 'c2c_never_moderate_registered_users' ) ) :
  *
  * @since 1.0
  *
- * @param int|string $approved    The approval status. Accepts 1, 0, or 'spam'.
- * @param array      $commentdata Comment data
+ * @param int|string|WP_Error $approved    The approval status. Accepts 1, 0,
+ *                                         'spam', 'trash', or WP_Error.
+ * @param array               $commentdata Comment data
  *
- * @return bool      New approval status for comment, either same as incoming or 1
+ * @return int|string|WP_Error New approval status for comment, either same as incoming or 1
  */
 function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 	global $wpdb;
@@ -102,12 +103,16 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 			 * Filters the approval when the plugin switches a comment from being
 			 * unapproved to being approved.
 			 *
+			 * Returning a WP_Error value from the filter will shortcircuit
+			 * comment insertion and allow skipping further processing.
+			 *
 			 * @since 2.2
 			 *
-			 * @param bool    $approved    Approval status. Accepts 1, 0, 'spam',
-			 *                             WP_Error. Default 1.
-			 * @param array   $commentdata Comment data.
-			 * @param WP_User $user        The commenting user.
+			 * @param int|string|WP_Error $approved Approval status. Accepts
+			 *                                      1, 0, 'spam', 'trash', or
+			 *                                      WP_Error. Default 1.
+			 * @param array      $commentdata       Comment data.
+			 * @param WP_User    $user              The commenting user.
 			 */
 			$approved = apply_filters( 'c2c_never_moderate_registered_users_approved', 1, $commentdata, $user );
 		}

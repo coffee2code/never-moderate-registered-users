@@ -83,9 +83,9 @@ The 'c2c_never_moderate_registered_users_approved' filter allows for granular co
 
 Arguments:
 
-* $approved    (bool)    The approval status. Will be 1 unless changed by another plugin using this hook. Accepts 1, 0, 'spam' or WP_Error.
-* $commentdata (array)   Comment data.
-* $user        (WP_User) The commenting user.
+* $approved    (int|string) The approval status. Will be 1 unless changed by another plugin using this hook. May be passed 1, 0, or 'spam'. Hooking function can return any of those in addition to 'trash' or WP_Error.
+* $commentdata (array)      Comment data.
+* $user        (WP_User)    The commenting user.
 
 Example:
 
@@ -93,10 +93,10 @@ Example:
 /**
  * Always moderate comments by registered users if they mention "Google".
  *
- * @param bool    $approved    Approval status. Accepts 1, 0, 'spam', WP_Error.
- * @param array   $commentdata Comment data.
- * @param WP_User $user        The commenting user.
- * @return bool
+ * @param int|string $approved  Approval status. Will be one of 1, 0, or 'spam'.
+ * @param array      $commentdata        Comment data.
+ * @param WP_User    $user               The commenting user.
+ * @return int|string|WP_Error Can a registered user's comment bypass moderation? Either 1, 0, 'spam', 'trash', or WP_Error.
  */
 function c2c_even_registered_users_cannot_say_google( $approved, $commentdata, $user ) {
 	if ( $approved && false !== stripos( $commentdata['comment_content'], 'google' ) ) {
