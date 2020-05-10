@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Never Moderate Registered Users
  * Version:     2.2.2
- * Plugin URI:  http://coffee2code.com/wp-plugins/never-moderate-registered-users/
+ * Plugin URI:  https://coffee2code.com/wp-plugins/never-moderate-registered-users/
  * Author:      Scott Reilly
- * Author URI:  http://coffee2code.com/
+ * Author URI:  https://coffee2code.com/
  * Text Domain: never-moderate-registered-users
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
