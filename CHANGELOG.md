@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Disallow handling comments flagged with `WP_Error`
 * Change: Update inline docs for `c2c_never_moderate_registered_users()` and filter `c2c_never_moderate_registered_users_approved` to reflect that a `WP_Error` and 'trash' are also valid potential values
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
 * Change: Note compatibility through WP 5.4+

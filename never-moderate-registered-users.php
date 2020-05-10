@@ -64,8 +64,9 @@ function c2c_never_moderate_registered_users( $approved, $commentdata ) {
 		$user_id = false;
 	}
 
-	// If the comment isn't from a registered user, or is already approved, don't change approval status
-	if ( ! $user_id || 1 == $approved ) {
+	// If the comment status is a WP_Error, isn't from a registered user, or
+	// is already approved, then don't change approval status
+	if ( is_wp_error( $approved ) || ! $user_id || 1 == $approved ) {
 		return $approved;
 	}
 

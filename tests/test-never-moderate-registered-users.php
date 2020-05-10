@@ -133,6 +133,29 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		$this->assertEquals( '1', $comment->comment_approved );
 	}
 
+	public function test_registered_user_trash_comment_is_approved() {
+		$user_id     = $this->create_user( 'subscriber' );
+		$commentdata = $this->get_commentdata( array( 'comment_approved' => 'trash', 'user_id' => $user_id ) );
+
+		$this->assertEquals( '1', wp_allow_comment( $commentdata ) );
+
+		$comment_id = wp_new_comment( $commentdata );
+		$comment = get_comment( $comment_id );
+
+		$this->assertEquals( '1', $comment->comment_approved );
+	}
+
+	public function test_filter_registered_user_error_comment_is_unaffected() {
+		$user_id     = $this->create_user( 'subscriber' );
+		$commentdata = $this->get_commentdata( array( 'comment_content' => 'comment', 'user_id' => $user_id ) );
+
+		$this->assertEquals( '1', wp_allow_comment( $commentdata ) );
+
+		add_filter( 'pre_comment_approved', function( $approved ) { return new WP_Error( 'comment_is_invalid', 'Comment is invalid' ); } );
+
+		$this->assertTrue( is_wp_error( wp_allow_comment( $commentdata ) ) );
+	}
+
 	public function test_unregistered_user_good_comment_not_affected() {
 		$commentdata = $this->get_commentdata( array( 'comment_content' => 'comment' ) );
 
