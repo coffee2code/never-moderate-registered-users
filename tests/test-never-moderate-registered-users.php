@@ -16,10 +16,6 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 	public function tearDown() {
 		parent::tearDown();
 		$this->unset_current_user();
-
-		remove_filter( 'c2c_never_moderate_registered_users_caps', array( $this, 'c2c_never_moderate_registered_users_caps' ) );
-		remove_filter( 'comment_max_links_url', array( $this, 'comment_max_links_url' ) );
-		remove_filter( 'c2c_never_moderate_registered_users_approved', array( $this, 'c2c_never_moderate_registered_users_approved' ) );
 	}
 
 
