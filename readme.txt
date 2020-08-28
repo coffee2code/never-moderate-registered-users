@@ -50,7 +50,7 @@ Yes.
 
 == Hooks ==
 
-The plugin is further customizable via two filters. Typically, these customizations would be put into your active theme's functions.php file, or used by another plugin.
+The plugin is further customizable via two filters. Typically, code making use of filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain).
 
 **c2c_never_moderate_registered_users_caps (filter)**
 
@@ -67,7 +67,7 @@ Example:
  * Require that a user have at least 'contributor' capabilities in order to be
  * trusted enough not to be moderated.
  *
- * @param $args $caps Array of trusted capabilities. If blank, then any user registered on the site is trusted.
+ * @param array $caps Array of trusted capabilities. If blank, then any user registered on the site is trusted.
  * @return array
  */
 function dont_moderate_contributors( $caps ) {
