@@ -5,7 +5,7 @@ Tags: comment, moderation, subscribers, spam, registered, users, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 5.4
+Tested up to: 5.5
 Stable tag: 2.3
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
