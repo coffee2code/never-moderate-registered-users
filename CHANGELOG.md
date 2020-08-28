@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 2.3.1 _(2020-08-27)_
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing
     * Change: Move `bin/` to `phpunit/bin/`

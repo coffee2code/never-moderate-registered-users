@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.5
-Stable tag: 2.3
+Stable tag: 2.3.1
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -110,6 +110,17 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 == Changelog ==
 
+= 2.3.1 (2020-08-27) =
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+* Change: Tweak some documentation in readme.txt
+* Unit tests: Check if WP is 5.5+ to use renamed option names
+
 = 2.3 (2020-05-10) =
 * Change: Disallow handling comments flagged with `WP_Error`
 * Change: Update inline docs for `c2c_never_moderate_registered_users()` and filter `c2c_never_moderate_registered_users_approved` to reflect that a `WP_Error` and 'trash' are also valid potential values
@@ -125,19 +136,13 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 * Change: Update copyright date (2020)
 * Change: Split paragraph in README.md's "Support" section into two
 
-= 2.2.1 (2019-03-07) =
-* New: Add inline documentation for undocumented hook
-* Fix: Correct code example error in readme
-* Change: Rename readme.txt section from 'Filters' to 'Hooks'
-* Change: Tweak third installation instruction
-* Change: Note compatibility through WP 5.1+
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.1 =
+Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
 
 = 2.3 =
 Minor update: Skipped handling of comments flagged as being an error, updated a few URLs to be HTTPS, updated some inline docs, and noted compatibility through WP 5.4+.
