@@ -7,9 +7,11 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 	public function setUp() {
 		parent::setUp();
 
-		update_option( 'blacklist_keys', "blackjack\npoker\nthisisspam\nviagra" );
+		$is_wp55plus = version_compare( str_replace( '-src', '', $GLOBALS['wp_version'] ), '5.5', '>=' );
+
+		update_option( ( $is_wp55plus ? 'disallowed_keys' : 'blacklist_keys' ), "blackjack\npoker\nthisisspam\nviagra" );
 		update_option( 'comment_moderation', '0' );
-		update_option( 'comment_whitelist', '0' );
+		update_option( ( $is_wp55plus ? 'comment_previously_approved' : 'comment_whitelist' ), '0' );
 		update_option( 'comment_max_links', 1 );
 	}
 
