@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.7
-Stable tag: 2.3.1
+Stable tag: 2.3.2
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -110,6 +110,10 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 
 == Changelog ==
 
+= 2.3.2 (2021-04-09) =
+* Change: Note compatibility through WP 5.7+
+* Change: Update copyright date (2021)
+
 = 2.3.1 (2020-08-27) =
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing
@@ -129,17 +133,13 @@ add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered
 * Change: Update links to coffee2code.com to be HTTPS
 * Change: Unit tests: Remove unnecessary unregistering of hooks
 
-= 2.2.2 (2019-11-25) =
-* New: Add CHANGELOG.md and move all but most recent changelog entries into it
-* Change: Update unit test install script and bootstrap to use latest WP unit test repo
-* Change: Note compatibility through WP 5.3+
-* Change: Update copyright date (2020)
-* Change: Split paragraph in README.md's "Support" section into two
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.2 =
+Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
 
 = 2.3.1 =
 Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
