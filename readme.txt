@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 5.8
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -58,6 +58,18 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 
 == Changelog ==
 
+= 2.3.3 (2021-10-05) =
+* New: Add DEVELOPER-DOCS.md and move hooks documentation into it
+* Change: Note compatibility through WP 5.8+
+* Change: Tweak installation instruction
+* Unit tests:
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/`
+        * Change: Move `phpunit/bin` into `tests/`
+    * Change: Remove 'test-' prefix from unit test file
+    * Change: In bootstrap, store path to plugin file constant
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+
 = 2.3.2 (2021-04-09) =
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
@@ -73,18 +85,13 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 * Change: Tweak some documentation in readme.txt
 * Unit tests: Check if WP is 5.5+ to use renamed option names
 
-= 2.3 (2020-05-10) =
-* Change: Disallow handling comments flagged with `WP_Error`
-* Change: Update inline docs for `c2c_never_moderate_registered_users()` and filter `c2c_never_moderate_registered_users_approved` to reflect that a `WP_Error` and 'trash' are also valid potential values
-* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
-* Change: Note compatibility through WP 5.4+
-* Change: Update links to coffee2code.com to be HTTPS
-* Change: Unit tests: Remove unnecessary unregistering of hooks
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.3 =
+Trivial update: added DEVELOPER-DOCS.md, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
 
 = 2.3.2 =
 Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
