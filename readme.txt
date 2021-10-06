@@ -48,64 +48,12 @@ Yes. You can specify the capabilities and roles that can bypass moderation. See 
 Yes.
 
 
-== Hooks ==
+== Developer Documentation ==
 
-The plugin is further customizable via two filters. Typically, code making use of filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain).
+Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/DEVELOPER-DOCS.md). That documentation covers the numerous hooks provided by the plugin. Those hooks are listed below to provide an overview of what's available.
 
-**c2c_never_moderate_registered_users_caps (filter)**
-
-The 'c2c_never_moderate_registered_users_caps' filter allows you to define the capabilities that are automatically trusted, any one of which a user must have in order to never get moderated.
-
-Arguments:
-
-* $caps (array): Array of capabilities, one of which a user must have in order to bypass moderation checks. Default is an empty array (meaning any registered user bypasses moderation checks.)
-
-Example:
-
-`
-/**
- * Require that a user have at least 'contributor' capabilities in order to be
- * trusted enough not to be moderated.
- *
- * @param array $caps Array of trusted capabilities. If blank, then any user registered on the site is trusted.
- * @return array
- */
-function dont_moderate_contributors( $caps ) {
-	$caps[] = 'contributor';
-	return $caps;
-}
-add_filter( 'c2c_never_moderate_registered_users_caps', 'dont_moderate_contributors' );
-`
-
-**c2c_never_moderate_registered_users_approved (filter)**
-
-The 'c2c_never_moderate_registered_users_approved' filter allows for granular control for whether a comment by a registered user that would otherwise be moderated or marked as spam should automatically be approved. Note: this filter only runs when a comment is from a registered user *and* is flagged for moderation or spam.
-
-Arguments:
-
-* $approved    (int|string) The approval status. Will be 1 unless changed by another plugin using this hook. May be passed 1, 0, or 'spam'. Hooking function can return any of those in addition to 'trash' or WP_Error.
-* $commentdata (array)      Comment data.
-* $user        (WP_User)    The commenting user.
-
-Example:
-
-`
-/**
- * Always moderate comments by registered users if they mention "Google".
- *
- * @param int|string $approved  Approval status. Will be one of 1, 0, or 'spam'.
- * @param array      $commentdata        Comment data.
- * @param WP_User    $user               The commenting user.
- * @return int|string|WP_Error Can a registered user's comment bypass moderation? Either 1, 0, 'spam', 'trash', or WP_Error.
- */
-function c2c_even_registered_users_cannot_say_google( $approved, $commentdata, $user ) {
-	if ( $approved && false !== stripos( $commentdata['comment_content'], 'google' ) ) {
-		$approved = 0;
-	}
-	return $approved;
-}
-add_filter( 'c2c_never_moderate_registered_users_approved', 'c2c_even_registered_users_cannot_say_google', 10, 3 );
-`
+* `c2c_never_moderate_registered_users_caps`     : Customize the capabilities that are automatically trusted, any one of which a user must have in order to never get moderated.
+* `c2c_never_moderate_registered_users_approved` : Customize granular control for whether a comment by a registered user that would otherwise be moderated or marked as spam should automatically be approved.
 
 
 == Changelog ==
