@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 6.3
-Stable tag: 2.3.3
+Stable tag: 2.3.4
 
 Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
 
@@ -58,6 +58,15 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 
 == Changelog ==
 
+= 2.3.4 (2023-06-06) =
+* Change: Note compatibility through WP 6.3+
+* Change: Update copyright date (2023)
+* New: Add `.gitignore` file
+* Unit tests:
+    * Fix: Allow tests to run against current versions of WordPress
+    * New: Add `composer.json` for PHPUnit Polyfill dependency
+    * Change: Prevent PHP warnings due to missing core-related generated files
+
 = 2.3.3 (2021-10-05) =
 * New: Add DEVELOPER-DOCS.md and move hooks documentation into it
 * Change: Note compatibility through WP 5.8+
@@ -74,21 +83,13 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
 
-= 2.3.1 (2020-08-27) =
-* Change: Restructure unit test file structure
-    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
-    * Change: Move `bin/` to `phpunit/bin/`
-    * Change: Move `tests/bootstrap.php` to `phpunit/`
-    * Change: Move `tests/` to `phpunit/tests/`
-    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
-* Change: Note compatibility through WP 5.5+
-* Change: Tweak some documentation in readme.txt
-* Unit tests: Check if WP is 5.5+ to use renamed option names
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.4 =
+Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)
 
 = 2.3.3 =
 Trivial update: added DEVELOPER-DOCS.md, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
