@@ -8,12 +8,12 @@ Requires at least: 3.1
 Tested up to: 6.6
 Stable tag: 2.3.4
 
-Never moderate or mark as spam comments made by registered users (or, alternatively, those with specified capabilities), regardless of the apparent spamminess of the comment.
+Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
 
 == Description ==
 
-This plugin prevents comments from registered users from ever going into the moderation queue or getting automatically marked as spam, regardless of the apparent spamminess of the comment.
+This plugin prevents comments from registered users (or, alternatively, those with specified capabilities) from ever going into the moderation queue or getting automatically marked as spam, regardless of the apparent spamminess of the comment.
 
 To be recognized as a registered user, the user must be logged into your site at the time they post their comment.
 

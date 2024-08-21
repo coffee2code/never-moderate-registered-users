@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Shorten plugin description
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
 
