@@ -7,6 +7,7 @@
 * Change: Reduce number of 'Tags' from `readme.txt`
 * Change: Remove development and testing-related files from release packaging
 * Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin directory in a constant
 
 ## 2.3.4 _(2023-06-06)_

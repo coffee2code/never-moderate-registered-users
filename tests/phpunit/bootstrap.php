@@ -5,6 +5,9 @@
  * @package Never_Moderate_Registered_Users
  */
 
+// Prevent web access.
+( php_sapi_name() !== 'cli' ) && die();
+
 define( 'NEVER_MODERATE_REGISTERED_USERS_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
 define( 'NEVER_MODERATE_REGISTERED_USERS_PLUGIN_FILE', NEVER_MODERATE_REGISTERED_USERS_PLUGIN_DIR . '/never-moderate-registered-users.php' );
 
