@@ -6,6 +6,8 @@
 * Change: Update copyright date (2024)
 * Change: Reduce number of 'Tags' from `readme.txt`
 * Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * Change: In bootstrap, store path to plugin directory in a constant
 
 ## 2.3.4 _(2023-06-06)_
 * Change: Note compatibility through WP 6.3+
