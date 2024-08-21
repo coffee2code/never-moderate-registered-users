@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 2.3.5 _(2024-08-21)_
 * Change: Shorten plugin description
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)

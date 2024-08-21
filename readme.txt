@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 6.6
-Stable tag: 2.3.4
+Stable tag: 2.3.5
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -58,6 +58,16 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 
 == Changelog ==
 
+= 2.3.5 (2024-08-21) =
+* Change: Shorten plugin description
+* Change: Note compatibility through WP 6.6+
+* Change: Update copyright date (2024)
+* Change: Reduce number of 'Tags' from `readme.txt`
+* Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
+    * Change: In bootstrap, store path to plugin directory in a constant
+
 = 2.3.4 (2023-06-06) =
 * Change: Note compatibility through WP 6.3+
 * Change: Update copyright date (2023)
@@ -79,14 +89,13 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
     * Change: In bootstrap, store path to plugin file constant
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
 
-= 2.3.2 (2021-04-09) =
-* Change: Note compatibility through WP 5.7+
-* Change: Update copyright date (2021)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/never-moderate-registered-users/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.5 =
+Trivial update: noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
 
 = 2.3.4 =
 Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)
