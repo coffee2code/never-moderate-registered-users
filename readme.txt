@@ -43,7 +43,7 @@ This plugin assumes that any comment made by a registered user (or a user with a
 
 Yes. You can specify the capabilities and roles that can bypass moderation. See the example provided for the 'c2c_never_moderate_registered_users_caps' filter.
 
-= Does this plugin include unit tests? =
+= Does this plugin have unit tests? =
 
 Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/never-moderate-registered-users/).
 
