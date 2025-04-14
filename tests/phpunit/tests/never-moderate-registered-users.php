@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die();
 
 class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 
-	public function setUp() {
+	public function setUp(): void {
 		parent::setUp();
 
 		$is_wp55plus = version_compare( str_replace( '-src', '', $GLOBALS['wp_version'] ), '5.5', '>=' );
@@ -15,7 +15,7 @@ class Never_Moderate_Registered_Users_Test extends WP_UnitTestCase {
 		update_option( 'comment_max_links', 1 );
 	}
 
-	public function tearDown() {
+	public function tearDown(): void {
 		parent::tearDown();
 		$this->unset_current_user();
 	}
