@@ -5,7 +5,7 @@ Tags: comment, moderation, subscribers, spam, users
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 6.6
+Tested up to: 6.8
 Stable tag: 2.3.5
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
