@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
 Tested up to: 6.8
-Stable tag: 2.3.5
+Stable tag: 2.3.6
 
 Never moderate or mark as spam comments made by registered users, regardless of the apparent spamminess of the comment.
 
@@ -58,6 +58,13 @@ Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/c
 
 == Changelog ==
 
+= 2.3.6 (2025-04-14) =
+* Change: Note compatibility through WP 6.8+
+* Change: Note compatibility through PHP 8.3+
+* Change: Update copyright date (2025)
+* Unit tests:
+    * Change: Explicitly define return type for overridden methods
+
 = 2.3.5 (2024-08-21) =
 * Change: Shorten plugin description
 * Change: Note compatibility through WP 6.6+
@@ -93,6 +100,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/ne
 
 
 == Upgrade Notice ==
+
+= 2.3.6 =
+Trivial update: noted compatibility through WP 6.8+ and PHP 8.3+, improved unit testing while also removing unit tests from release packaging, and updated copyright date (2025)
 
 = 2.3.5 =
 Trivial update: noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
